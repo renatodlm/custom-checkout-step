@@ -1,0 +1,29 @@
+#billing_postcode_field {
+   flex: 0 0 calc(50% - 0.9375rem) !important;
+   max-width: calc(50% - 0.9375rem) !important;
+   width: calc(50% - 0.9375rem) !important;
+}
+#billing_state_field {
+   flex: 0 0 calc(50% - 0.9375rem) !important;
+   max-width: calc(50% - 0.9375rem) !important;
+   width: calc(50% - 0.9375rem) !important;
+}
+
+.woocommerce-billing-fields__field-wrapper {
+   display: flex;
+   column-gap: 1.875rem;
+   row-gap: 0.625rem;
+   align-items: space-between;
+   flex-wrap: wrap;
+}
+.woocommerce-billing-fields__field-wrapper .form-row-first,
+.woocommerce-billing-fields__field-wrapper .form-row-last {
+   flex: 0 0 calc(50% - 0.9375rem) !important;
+   max-width: calc(50% - 0.9375rem) !important;
+   width: calc(50% - 0.9375rem) !important;
+}
+.woocommerce-billing-fields__field-wrapper .form-row {
+   flex: 0 0 100%;
+   max-width: 100%;
+   width: 100%;
+}
