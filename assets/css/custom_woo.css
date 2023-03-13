@@ -1,0 +1,181 @@
+.woocommerce-table.woocommerce-table--order-details,
+.woocommerce-checkout-review-order-table {
+   margin-top: 1.5rem !important;
+   border-collapse: collapse !important;
+   width: 100% !important;
+   border: none !important;
+   background: transparent !important;
+}
+.woocommerce-table.woocommerce-table--order-details *,
+.woocommerce-checkout-review-order-table * {
+   border: none !important;
+   /* background: transparent !important; */
+   border-color: transparent !important;
+}
+
+.woocommerce-checkout-review-order-table thead {
+   display: none !important;
+}
+
+.woocommerce-checkout-review-order-table th {
+   color: #333 !important;
+   font-weight: 300 !important;
+   padding: 1rem !important;
+   text-align: left !important;
+}
+
+.woocommerce-checkout-review-order-table td {
+   color: #333 !important;
+   font-weight: 300 !important;
+   padding: 0.5rem !important;
+}
+
+.woocommerce-checkout-review-order-table td.product-name {
+   font-weight: 300 !important;
+}
+
+.woocommerce-checkout-review-order-table td.product-total {
+   font-weight: bold !important;
+   text-align: right !important;
+}
+
+.woocommerce-checkout-review-order-table .order-total th {
+   color: #333 !important;
+   font-weight: 300 !important;
+   padding: 1rem !important;
+   text-align: right !important;
+}
+
+.woocommerce-checkout-review-order-table .order-total th {
+   background-color: transparent !important;
+   color: #007b6f !important;
+   font-weight: 300 !important;
+}
+
+.woocommerce-checkout-review-order-table .order-total td {
+   background-color: transparent !important;
+}
+
+.woocommerce-checkout-review-order-table .order-total .amount {
+   font-size: 1.5rem !important;
+   font-weight: bold !important;
+}
+
+/* Estilo para botão de atualizar carrinho */
+.woocommerce-checkout .woocommerce input.button.update-cart {
+   background-color: #007b6f !important;
+   border: none !important;
+   color: #fff !important;
+   cursor: pointer !important;
+   display: inline-block !important;
+   font-size: 1rem !important;
+   font-weight: 500 !important;
+   margin-bottom: 1rem !important;
+   padding: 0.75rem 1.5rem !important;
+   text-align: center !important;
+   text-decoration: none !important;
+   transition: background-color 0.3s ease-in-out !important;
+}
+
+/* Estilos globais */
+body {
+   font-family: Arial, sans-serif;
+   font-size: 16px;
+   line-height: 1.5;
+   color: #333;
+   background-color: #fff;
+}
+
+/* Container principal */
+.thankyou-page {
+   max-width: 800px;
+   margin: 0 auto;
+   padding: 50px 20px;
+   text-align: center;
+}
+
+/* Logo */
+.thankyou-page img {
+   max-width: 200px;
+   margin-bottom: 30px;
+}
+
+/* Detalhes do pedido */
+.order-details {
+   margin-bottom: 30px;
+}
+
+/* Mensagem de agradecimento */
+.thankyou-message {
+   margin-bottom: 50px;
+   font-size: 24px;
+   font-weight: bold;
+   color: #007b6f;
+   text-transform: uppercase;
+}
+
+/* Botão de volta à loja */
+.back-to-shop {
+   display: inline-block;
+   padding: 10px 20px;
+   font-size: 16px;
+   font-weight: bold;
+   color: #fff !important;
+   background-color: #007b6f;
+   border-radius: 5px;
+   text-decoration: none !important;
+   transition: all 0.3s ease;
+}
+
+.back-to-shop:hover {
+   background-color: #005a51;
+}
+
+/* Detalhes do pedido: tabela */
+.order-details-table {
+   width: 100%;
+   margin-bottom: 30px;
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+.order-details-table th,
+.order-details-table td {
+   padding: 10px;
+   border: 1px solid #ddd;
+   text-align: left;
+}
+
+.order-details-table th {
+   font-weight: bold;
+}
+
+/* Detalhes do pedido: totais */
+.order-totals {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 30px;
+}
+
+.order-totals strong {
+   font-size: 20px;
+   font-weight: bold;
+   color: #007b6f;
+}
+
+.thankyou-page .woocommerce-notice {
+   font-size: 1.5rem;
+   font-weight: 500;
+   margin-bottom: 1.875rem;
+   margin-bottom: 50px;
+   font-size: 24px;
+   font-weight: bold;
+   color: #007b6f;
+   text-transform: uppercase;
+}
+
+.woocommerce-checkout #order_review .blockUI.blockOverlay,
+.woocommerce-checkout #order_review .blockUI {
+   background-color: #f3f4f6 !important; /* Substitua "red" pela cor desejada */
+}

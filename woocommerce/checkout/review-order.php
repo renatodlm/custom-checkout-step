@@ -37,17 +37,19 @@ defined('ABSPATH') || exit;
          {
       ?>
             <tr class="<?php echo esc_attr(apply_filters('woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key)); ?>">
-               <td class="product-name">
-                  <?php echo wp_kses_post(apply_filters('woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key)) . '&nbsp;'; ?>
-                  <?php echo apply_filters('woocommerce_checkout_cart_item_quantity', ' <strong class="product-quantity">' . sprintf('&times;&nbsp;%s', $cart_item['quantity']) . '</strong>', $cart_item, $cart_item_key); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+               <td class="product-thumbnail"><?php echo $_product->get_image('thumbnail'); ?></td>
+               <td class="product-name !text-xs">
+                  <?php echo wp_kses_post(apply_filters('woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key)); ?>
+                  <?php echo apply_filters('woocommerce_checkout_cart_item_quantity', '<p><span class="!text-xs font-bold">Qty</span> <strong class="product-quantity">' . sprintf('&times;&nbsp;%s', $cart_item['quantity']) . '</strong></p>', $cart_item, $cart_item_key); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
                   ?>
-                  <?php echo wc_get_formatted_cart_item_data($cart_item); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+                  <?php echo wc_get_formatted_cart_item_data($cart_item); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
                   ?>
+                  <p class="product-total mt-2 font-bold !text-sm">
+                     <?php echo apply_filters('woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal($_product, $cart_item['quantity']), $cart_item, $cart_item_key); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+                     ?>
+                  </p>
                </td>
-               <td class="product-total">
-                  <?php echo apply_filters('woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal($_product, $cart_item['quantity']), $cart_item, $cart_item_key); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-                  ?>
-               </td>
+
             </tr>
       <?php
          }
@@ -89,7 +91,7 @@ defined('ABSPATH') || exit;
 
       <?php if (wc_tax_enabled() && !WC()->cart->display_prices_including_tax()) : ?>
          <?php if ('itemized' === get_option('woocommerce_tax_total_display')) : ?>
-            <?php foreach (WC()->cart->get_tax_totals() as $code => $tax) : // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited 
+            <?php foreach (WC()->cart->get_tax_totals() as $code => $tax) : // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
             ?>
                <tr class="tax-rate tax-rate-<?php echo esc_attr(sanitize_title($code)); ?>">
                   <th><?php echo esc_html($tax->label); ?></th>
