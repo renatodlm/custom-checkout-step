@@ -1,7 +1,9 @@
 <h1 align="center">Hi 👋, I'm Renato Marques</h1>
 <h3 align="center">A passionate full stack developer from Brazil</h3>
 
-- 🔭 I’m currently working on **Custom Checkout Step**
+**Custom Checkout Step** 
+
+Customizer for woocommerce
 
 - 🌱 I’m currently learning **NodeJS**
 
